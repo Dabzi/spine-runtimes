@@ -12,6 +12,11 @@ target
 *.user
 .DS_Store
 
+bin/
+obj/
+
+*.csproj
+*.csproj.user
 
 .idea/
 build/
