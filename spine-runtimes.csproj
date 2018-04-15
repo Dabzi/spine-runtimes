@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DFEE31C-398F-4431-ACC4-5E7CF6CBC23A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>spine_runtimes</RootNamespace>
+    <AssemblyName>spine_runtimes</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework, Version=3.6.0.1625, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoGame.Framework.DesktopGL.3.6.0.1625\lib\net40\MonoGame.Framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="spine-csharp\src\Animation.cs" />
+    <Compile Include="spine-csharp\src\AnimationState.cs" />
+    <Compile Include="spine-csharp\src\AnimationStateData.cs" />
+    <Compile Include="spine-csharp\src\Atlas.cs" />
+    <Compile Include="spine-csharp\src\Attachments\AtlasAttachmentLoader.cs" />
+    <Compile Include="spine-csharp\src\Attachments\Attachment.cs" />
+    <Compile Include="spine-csharp\src\Attachments\AttachmentLoader.cs" />
+    <Compile Include="spine-csharp\src\Attachments\AttachmentType.cs" />
+    <Compile Include="spine-csharp\src\Attachments\BoundingBoxAttachment.cs" />
+    <Compile Include="spine-csharp\src\Attachments\ClippingAttachment.cs" />
+    <Compile Include="spine-csharp\src\Attachments\MeshAttachment.cs" />
+    <Compile Include="spine-csharp\src\Attachments\PathAttachment.cs" />
+    <Compile Include="spine-csharp\src\Attachments\PointAttachment.cs" />
+    <Compile Include="spine-csharp\src\Attachments\RegionAttachment.cs" />
+    <Compile Include="spine-csharp\src\Attachments\VertexAttachment.cs" />
+    <Compile Include="spine-csharp\src\BlendMode.cs" />
+    <Compile Include="spine-csharp\src\Bone.cs" />
+    <Compile Include="spine-csharp\src\BoneData.cs" />
+    <Compile Include="spine-csharp\src\Event.cs" />
+    <Compile Include="spine-csharp\src\EventData.cs" />
+    <Compile Include="spine-csharp\src\ExposedList.cs" />
+    <Compile Include="spine-csharp\src\IConstraint.cs" />
+    <Compile Include="spine-csharp\src\IkConstraint.cs" />
+    <Compile Include="spine-csharp\src\IkConstraintData.cs" />
+    <Compile Include="spine-csharp\src\IUpdatable.cs" />
+    <Compile Include="spine-csharp\src\Json.cs" />
+    <Compile Include="spine-csharp\src\MathUtils.cs" />
+    <Compile Include="spine-csharp\src\PathConstraint.cs" />
+    <Compile Include="spine-csharp\src\PathConstraintData.cs" />
+    <Compile Include="spine-csharp\src\Skeleton.cs" />
+    <Compile Include="spine-csharp\src\SkeletonBinary.cs" />
+    <Compile Include="spine-csharp\src\SkeletonBounds.cs" />
+    <Compile Include="spine-csharp\src\SkeletonClipping.cs" />
+    <Compile Include="spine-csharp\src\SkeletonData.cs" />
+    <Compile Include="spine-csharp\src\SkeletonJson.cs" />
+    <Compile Include="spine-csharp\src\Skin.cs" />
+    <Compile Include="spine-csharp\src\Slot.cs" />
+    <Compile Include="spine-csharp\src\SlotData.cs" />
+    <Compile Include="spine-csharp\src\TransformConstraint.cs" />
+    <Compile Include="spine-csharp\src\TransformConstraintData.cs" />
+    <Compile Include="spine-csharp\src\Triangulator.cs" />
+    <Compile Include="spine-xna\src\MeshBatcher.cs" />
+    <Compile Include="spine-xna\src\ShapeRenderer.cs" />
+    <Compile Include="spine-xna\src\SkeletonDebugRenderer.cs" />
+    <Compile Include="spine-xna\src\SkeletonRenderer.cs" />
+    <Compile Include="spine-xna\src\Util.cs" />
+    <Compile Include="spine-xna\src\XnaTextureLoader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

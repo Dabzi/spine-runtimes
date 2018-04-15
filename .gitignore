@@ -15,7 +15,6 @@ target
 bin/
 obj/
 
-*.csproj
 *.csproj.user
 
 .idea/
